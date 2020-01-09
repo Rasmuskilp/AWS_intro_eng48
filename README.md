@@ -5,6 +5,8 @@
 #### important points for setup, allow subnet auto public ip
 #### use the premade security groups eng-48
 #### use ubuntu 16.04 server x86
+### download the SSH key provided(if you already do not have one)
+###the location of the ssh should be in your ~/.ssh 
 ##after creating the server on bash copy the necessary folder to the VM
 ``scp -i ~/.ssh/rasmus_kilp_eng48_first_key.pem -r ~/projects/deployment-code ubuntu@34.241.166.199:/home/ubuntu/deployment-code
 ``

@@ -34,3 +34,27 @@ echo sudo npm install
 echo sudo npm test
 EOT
 #added changes
+scp -o StrictHostKeyChecking='no' -r app ubuntu@34.253.192.184:/home/ubuntu
+scp -o StrictHostKeyChecking='no' -r environment ubuntu@34.253.192.184:/home/ubuntu
+
+ssh -o StrictHostKeyChecking='no' ubuntu@34.253.192.184 <<EOF
+	echo 'Run bash files (make sure you can actually run)'
+    #cd /home/ubuntu/environment/app
+   	#chmod +x provision.sh
+   	#chmod 777 provision.sh
+    #./provision.sh
+    #cd /home/ubuntu/environment/db
+    #chmod 777 provision.sh
+    #./provision.sh
+    chmod 777 /home/ubuntu/environment/app/provision.sh
+    chmod 777 /home/ubuntu/environment/db/provision.sh
+    ./environment/app/provision.sh
+    ./environment/db/provision.sh
+    echo ' go to the right directory'
+    cd /home/ubuntu/app
+    echo 'install dependencies'
+    sudo apt-get install npm -y
+   #node seed/seed.js
+    echo 'start our app'
+    sudo npm start &
+EOF

@@ -33,3 +33,4 @@ echo cd app
 echo sudo npm install
 echo sudo npm test
 EOT
+#added changes

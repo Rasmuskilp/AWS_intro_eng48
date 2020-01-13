@@ -58,3 +58,4 @@ ssh -o StrictHostKeyChecking='no' ubuntu@34.253.192.184 <<EOF
     echo 'start our app'
     sudo npm start &
 EOF
+#additional stuff

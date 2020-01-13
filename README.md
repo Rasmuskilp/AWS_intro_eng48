@@ -59,3 +59,4 @@ ssh -o StrictHostKeyChecking='no' ubuntu@34.253.192.184 <<EOF
     sudo npm start &
 EOF
 #additional stuff
+#more changes 
